@@ -1,6 +1,6 @@
 import { z } from "zod";
-import { createRouter, publicQuery } from "./middleware";
-import { insertLead } from "./queries/leads";
+import { createRouter, publicQuery } from "./middleware.js";
+import { insertLead } from "./queries/leads.js";
 
 const optionalField = (max: number) =>
   z.string().trim().max(max).optional().or(z.literal(""));
