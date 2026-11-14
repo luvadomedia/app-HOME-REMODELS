@@ -1,15 +1,15 @@
 import { z } from "zod";
 import { generateText } from "ai";
-import { createRouter, publicQuery } from "./middleware";
-import { kimiGw } from "./ai/provider";
+import { createRouter, publicQuery } from "./middleware.js";
+import { kimiGw } from "./ai/provider.js";
 import {
   listModels,
   classifyAiError,
   AiUnavailable,
   ContentRejected,
   AiTransient,
-} from "./ai/ai-client";
-import { logAssistantMessage } from "./queries/leads";
+} from "./ai/ai-client.js";
+import { logAssistantMessage } from "./queries/leads.js";
 
 const SYSTEM_PROMPT = `You are the Home Remodels Project Assistant — the AI concierge on the Home Remodels website. Home Remodels is a premium residential remodeling company serving Southern California, primarily the Inland Empire, Los Angeles County, and the High Desert.
 

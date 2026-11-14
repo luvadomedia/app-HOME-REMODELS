@@ -1,5 +1,5 @@
-import { getDb } from "./connection";
-import { leads, assistantMessages } from "../../db/schema";
+import { getDb } from "./connection.js";
+import { leads, assistantMessages } from "../../db/schema.js";
 
 export interface NewLead {
   name: string;
